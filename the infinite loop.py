@@ -75,36 +75,6 @@ pelo professor Alison Borges, do Instituto Federal Catarinense — Campus Concó
 alunos Ramon Petry e Davi Patzlaff em 2026, no primeiro ano do Ensino Médio integrado ao Técnico em Informáti-
 ca para Internet. O jogo foi inspirado em RPGs de texto (Text-based RPG), especialmente em jogos como Zork.
 """)
-
-def raca_humano():
-     vida=100
-     velocidade=20
-     defesa=20
-     mana=0
-
-def raca_elfo():
-     vida=85
-     defesa=12
-     velocidade=25
-     mana=60
-
-def raca_anao():
-     vida=130
-     defesa=32
-     velocidade=12
-     mana=0
-
-def raca_goblin():
-     vida=70
-     defesa=10
-     velocidade=30
-     mana=0
-
-def raca_draconato():
-     vida=115
-     defesa=25
-     velocidade=16
-     mana=30
      
 
 def obter_raca():
@@ -172,10 +142,44 @@ defesa = 0
 mana = 0       
 
 
-def exibir_inventario():
-    print(f"Você tem {inventario} no seu inventário.")
 
-def exibir_status(nome_usuario,vida,defesa,velocidade,mana):
+
+def retirar_item_inv():
+    while True:
+        entrada_inv = str(input("""
+    ---Voce deseja tirar algum item do inventario?---
+                sim                nao
+
+    """)).strip().lower()
+            
+        if entrada_inv == "sim":
+            item = str(input("Qual(is) item(s) vc deseja retirar do seu inventario? "))
+            
+            if item in inventario:
+                inventario.remove(item)
+                print(f"Seu inventario ficou assim: {inventario}")
+            else:
+                print("Esse item não está no seu inventário.")
+                
+            break
+        elif entrada_inv == "nao":
+            print("\nVoltando")
+            break
+        else:
+            print('Comando errado digite "sim" ou "nao".')
+            
+        
+def exibir_inventario():
+    print(f"""
+    Você tem {inventario} no seu inventário.
+    """)
+    retirar_item_inv()
+
+    
+            
+        
+
+def exibir_status(nome_usuario,vida,defesa,velocidade,mana,items_no_inv):
     print(f"""              
             - STATUS DE {nome_usuario.upper()} -
             Fase:..........{fase}/100
@@ -222,8 +226,71 @@ def exibir_tabeal_raca():
            | Draconato |  115  |   25   |     16     |  30  |
            --=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--
            """)
-            
-def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana): # Inicia o jogo 
+
+def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo de lista, mais facil para fazer um return de varias coisas
+         
+    monstro = {
+        "Nome_monstro":"Nenhum",
+        "vida_monstro":0,
+        "dano_monstro":0,
+        "velocidade_monstro":0,
+        "defesa_monstro":0,
+        "xp_monstro":0,
+        "drop_moeda":0,
+        "drops_100%_monstro":[]
+    }
+
+    if entrada_monstro=="slime_verde":
+        monstro= {
+            "nome_monstro":"Slime Verde",
+            "vida_monstro":30,
+            "dano_monstro":5,
+            "velocidade_monstro":8,
+            "defesa_monstro":2,
+            "xp_montro":25,
+            "drop_moeda":5,
+            "drops_100%_monstro":[]
+        }
+
+    if entrada_monstro=="lobo_solitario":
+        monstro = {
+            "nome_monstro":"Lobo Solitario",
+            "vida_monstro":45,
+            "dano_monstro":10,
+            "velocidade_monstro":22,
+            "defesa_monstro":4,
+            "xp_monstro":35,
+            "drop_moeda":10,
+            "drops_100%_monstro":[]
+        }
+
+    if entrada_monstro=="goblin_sequestrador":
+        monstro = {
+            "nome_monstro":"Goblin Sequestrador",
+            "vida_mostro":40,
+            "dano_monstro":8,
+            "velocidade_montro":18,
+            "defesa_monstro":5,
+            "xp_montro":30,
+            "drop_moeda":15,
+            "drops_100%_monstro":[]
+        }
+
+    if entrada_monstro=="rato_gigante":
+        monstro = {    
+            "nome_monstro":"Rato Gigante",
+            "vida_mostro":35,
+            "dano_monstro":7,
+            "velocidade_montro":20,
+            "defesa_monstro":3,
+            "xp_montro":25,
+            "drop_moeda":8,
+            "drops_100%_monstro":[]
+        } 
+
+    
+     
+def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana,items_no_inv): # Inicia o jogo 
     inicio_sessao = time.time() 
     
     print(f"--- INICIANDO A AVENTURA DE {nome_usuario.upper()} ---")
@@ -271,7 +338,7 @@ def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana): # I
             print(f"Seu nick atual é: {nome_usuario}")    
 
         elif entrada == "/sts":
-            exibir_status(nome_usuario,vida,defesa,velocidade,mana)
+            exibir_status(nome_usuario,vida,defesa,velocidade,mana,items_no_inv)
 
         elif entrada == "/start":
             print('Você não pode usar o comando "/start", o jogo já iniciou!')
@@ -298,7 +365,7 @@ def main(): # Parte do menu
             nome_usuario = obter_nickname()
             raca_escolhida= obter_raca()
             vida,defesa,velocidade,mana=definir_atributos(raca_escolhida)
-            iniciar_jogo(nome_usuario,raca_escolhida,vida,defesa,velocidade,mana)
+            iniciar_jogo(nome_usuario,raca_escolhida,vida,defesa,velocidade,mana,items_no_inv)
             break 
             
         elif entrada == "/sair":
