@@ -240,6 +240,8 @@ def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo
         "drops_100%_monstro":[]
     }
 
+    # ato 1 floresta dos susuros fases 1 a 12 ↓
+
     if entrada_monstro=="slime_verde":
         monstro= {
             "nome_monstro":"Slime Verde",
@@ -252,7 +254,7 @@ def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo
             "drops_100%_monstro":[]
         }
 
-    if entrada_monstro=="lobo_solitario":
+    elif entrada_monstro=="lobo_solitario":
         monstro = {
             "nome_monstro":"Lobo Solitario",
             "vida_monstro":45,
@@ -264,7 +266,7 @@ def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo
             "drops_100%_monstro":[]
         }
 
-    if entrada_monstro=="goblin_sequestrador":
+    elif entrada_monstro=="goblin_sequestrador":
         monstro = {
             "nome_monstro":"Goblin Sequestrador",
             "vida_mostro":40,
@@ -276,7 +278,7 @@ def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo
             "drops_100%_monstro":[]
         }
 
-    if entrada_monstro=="rato_gigante":
+    elif entrada_monstro=="rato_gigante":
         monstro = {    
             "nome_monstro":"Rato Gigante",
             "vida_mostro":35,
@@ -287,6 +289,503 @@ def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo
             "drop_moeda":8,
             "drops_100%_monstro":[]
         } 
+
+    elif entrada_monstro=="":
+        monstro = {    
+            "nome_monstro":"Aranha Caçadora",
+            "vida_mostro":50,
+            "dano_monstro":12,
+            "velocidade_montro":24,
+            "defesa_monstro":6,
+            "xp_montro":40,
+            "drop_moeda":18,
+            "drops_100%_monstro":[]
+        } 
+
+    elif entrada_monstro == "goblin_guerreiro":
+            monstro = {
+                "nome_monstro": "Goblin Guerreiro",
+                "vida_monstro": 60,
+                "dano_monstro": 14,
+                "velocidade_monstro": 15,
+                "defesa_monstro": 12,
+                "xp_monstro": 50,
+                "drop_moeda": 25,
+                "drops_100_monstro": []
+            }
+    elif entrada_monstro == "javali_enfurecido":
+        monstro = {
+            "nome_monstro": "Javali Enfurecido",
+            "vida_monstro": 70,
+            "dano_monstro": 16,
+            "velocidade_monstro": 18,
+            "defesa_monstro": 8,
+            "xp_monstro": 55,
+            "drop_moeda": 20,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "planta_carnivora":
+        monstro = {
+            "nome_monstro": "Planta Carnívora",
+            "vida_monstro": 80,
+            "dano_monstro": 15,
+            "velocidade_monstro": 10,
+            "defesa_monstro": 10,
+            "xp_monstro": 60,
+            "drop_moeda": 30,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "esqueleto_errante":
+        monstro = {
+            "nome_monstro": "Esqueleto Errante",
+            "vida_monstro": 55,
+            "dano_monstro": 11,
+            "velocidade_monstro": 12,
+            "defesa_monstro": 10,
+            "xp_monstro": 45,
+            "drop_moeda": 12,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "kobold_espiao":
+        monstro = {
+            "nome_monstro": "Kobold Espião",
+            "vida_monstro": 45,
+            "dano_monstro": 9,
+            "velocidade_monstro": 26,
+            "defesa_monstro": 5,
+            "xp_monstro": 40,
+            "drop_moeda": 22,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "ent_menor":
+        monstro = {
+            "nome_monstro": "Ent Menor",
+            "vida_monstro": 90,
+            "dano_monstro": 13,
+            "velocidade_monstro": 8,
+            "defesa_monstro": 18,
+            "xp_monstro": 70,
+            "drop_moeda": 28,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "urso_de_pedra":
+        monstro = {
+            "nome_monstro": "Urso de Pedra",
+            "vida_monstro": 180,
+            "dano_monstro": 22,
+            "velocidade_monstro": 12,
+            "defesa_monstro": 25,
+            "xp_monstro": 200,
+            "drop_moeda": 80,
+            "drops_100_monstro": []
+        }
+
+    #ato 2 as minas esquecidas fases 13 a 25 ↓
+
+    elif entrada_monstro == "morcego_vampiro":
+        monstro = {
+            "nome_monstro": "Morcego Vampiro",
+            "vida_monstro": 50,
+            "dano_monstro": 12,
+            "velocidade_monstro": 28,
+            "defesa_monstro": 4,
+            "xp_monstro": 50,
+            "drop_moeda": 15,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "goblin_minerador":
+        monstro = {
+            "nome_monstro": "Goblin Minerador",
+            "vida_monstro": 65,
+            "dano_monstro": 15,
+            "velocidade_monstro": 16,
+            "defesa_monstro": 10,
+            "xp_monstro": 65,
+            "drop_moeda": 35,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "larva_escavadora":
+        monstro = {
+            "nome_monstro": "Larva Escavadora",
+            "vida_monstro": 75,
+            "dano_monstro": 14,
+            "velocidade_monstro": 10,
+            "defesa_monstro": 15,
+            "xp_monstro": 60,
+            "drop_moeda": 20,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "esqueleto_armado":
+        monstro = {
+            "nome_monstro": "Esqueleto Armado",
+            "vida_monstro": 85,
+            "dano_monstro": 18,
+            "velocidade_monstro": 14,
+            "defesa_monstro": 18,
+            "xp_monstro": 75,
+            "drop_moeda": 30,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "necrofago":
+        monstro = {
+            "nome_monstro": "Necrófago",
+            "vida_monstro": 90,
+            "dano_monstro": 20,
+            "velocidade_monstro": 18,
+            "defesa_monstro": 12,
+            "xp_monstro": 80,
+            "drop_moeda": 32,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "aranha_das_cavernas":
+        monstro = {
+            "nome_monstro": "Aranha das Cavernas",
+            "vida_monstro": 80,
+            "dano_monstro": 17,
+            "velocidade_monstro": 25,
+            "defesa_monstro": 10,
+            "xp_monstro": 70,
+            "drop_moeda": 28,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "gargula_de_pedra":
+        monstro = {
+            "nome_monstro": "Gárgula de Pedra",
+            "vida_monstro": 110,
+            "dano_monstro": 16,
+            "velocidade_monstro": 12,
+            "defesa_monstro": 28,
+            "xp_monstro": 90,
+            "drop_moeda": 40,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "zumbi_de_mina":
+        monstro = {
+            "nome_monstro": "Zumbi de Mina",
+            "vida_monstro": 120,
+            "dano_monstro": 15,
+            "velocidade_monstro": 6,
+            "defesa_monstro": 8,
+            "xp_monstro": 85,
+            "drop_moeda": 25,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "espectro_de_minerio":
+        monstro = {
+            "nome_monstro": "Espectro de Minério",
+            "vida_monstro": 95,
+            "dano_monstro": 22,
+            "velocidade_monstro": 22,
+            "defesa_monstro": 14,
+            "xp_monstro": 95,
+            "drop_moeda": 45,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "cobra_cuspideira":
+        monstro = {
+            "nome_monstro": "Cobra Cuspideira",
+            "vida_monstro": 70,
+            "dano_monstro": 19,
+            "velocidade_monstro": 24,
+            "defesa_monstro": 8,
+            "xp_monstro": 75,
+            "drop_moeda": 30,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "troll_das_cavernas":
+        monstro = {
+            "nome_monstro": "Troll das Cavernas",
+            "vida_monstro": 160,
+            "dano_monstro": 26,
+            "velocidade_monstro": 10,
+            "defesa_monstro": 20,
+            "xp_monstro": 130,
+            "drop_moeda": 60,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "basilisco_jovem":
+        monstro = {
+            "nome_monstro": "Basilisco Jovem",
+            "vida_monstro": 130,
+            "dano_monstro": 24,
+            "velocidade_monstro": 20,
+            "defesa_monstro": 22,
+            "xp_monstro": 110,
+            "drop_moeda": 55,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "golem_de_cristal":
+        monstro = {
+            "nome_monstro": "Golem de Cristal",
+            "vida_monstro": 280,
+            "dano_monstro": 30,
+            "velocidade_monstro": 10,
+            "defesa_monstro": 38,
+            "xp_monstro": 350,
+            "drop_moeda": 150,
+            "drops_100_monstro": []
+        }
+ 
+    #ato 3 as ruinas arcanas 26 a 37 ↓
+
+    elif entrada_monstro == "constructo_magico":
+        monstro = {
+            "nome_monstro": "Constructo Mágico",
+            "vida_monstro": 130,
+            "dano_monstro": 22,
+            "velocidade_monstro": 14,
+            "defesa_monstro": 25,
+            "xp_monstro": 120,
+            "drop_moeda": 50,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "cultista_novato":
+        monstro = {
+            "nome_monstro": "Cultista Novato",
+            "vida_monstro": 100,
+            "dano_monstro": 26,
+            "velocidade_monstro": 18,
+            "defesa_monstro": 12,
+            "xp_monstro": 110,
+            "drop_moeda": 45,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "elementar_de_fogo":
+        monstro = {
+            "nome_monstro": "Elementar de Fogo",
+            "vida_monstro": 120,
+            "dano_monstro": 30,
+            "velocidade_monstro": 22,
+            "defesa_monstro": 15,
+            "xp_monstro": 135,
+            "drop_moeda": 55,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "elementar_de_gelo":
+        monstro = {
+            "nome_monstro": "Elementar de Gelo",
+            "vida_monstro": 140,
+            "dano_monstro": 22,
+            "velocidade_monstro": 16,
+            "defesa_monstro": 24,
+            "xp_monstro": 135,
+            "drop_moeda": 55,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "lamina_vazia":
+        monstro = {
+            "nome_monstro": "Lâmina Vazia",
+            "vida_monstro": 90,
+            "dano_monstro": 32,
+            "velocidade_monstro": 32,
+            "defesa_monstro": 10,
+            "xp_monstro": 125,
+            "drop_moeda": 40,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "mago_renegado":
+        monstro = {
+            "nome_monstro": "Mago Renegado",
+            "vida_monstro": 110,
+            "dano_monstro": 28,
+            "velocidade_monstro": 20,
+            "defesa_monstro": 14,
+            "xp_monstro": 140,
+            "drop_moeda": 60,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "cavaleiro_espectral":
+        monstro = {
+            "nome_monstro": "Cavaleiro Espectral",
+            "vida_monstro": 160,
+            "dano_monstro": 34,
+            "velocidade_monstro": 18,
+            "defesa_monstro": 30,
+            "xp_monstro": 160,
+            "drop_moeda": 70,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "sombra_faminta":
+        monstro = {
+            "nome_monstro": "Sombra Faminta",
+            "vida_monstro": 105,
+            "dano_monstro": 35,
+            "velocidade_monstro": 30,
+            "defesa_monstro": 8,
+            "xp_monstro": 130,
+            "drop_moeda": 50,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "gorgona_mistica":
+        monstro = {
+            "nome_monstro": "Górgona Mística",
+            "vida_monstro": 170,
+            "dano_monstro": 32,
+            "velocidade_monstro": 25,
+            "defesa_monstro": 22,
+            "xp_monstro": 175,
+            "drop_moeda": 85,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "quimera_arcana":
+        monstro = {
+            "nome_monstro": "Quimera Arcana",
+            "vida_monstro": 210,
+            "dano_monstro": 38,
+            "velocidade_monstro": 22,
+            "defesa_monstro": 26,
+            "xp_monstro": 210,
+            "drop_moeda": 100,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "mago_corrompido":
+        monstro = {
+            "nome_monstro": "Mago Corrompido",
+            "vida_monstro": 350,
+            "dano_monstro": 45,
+            "velocidade_monstro": 24,
+            "defesa_monstro": 20,
+            "xp_monstro": 500,
+            "drop_moeda": 250,
+            "drops_100_monstro": []
+        }
+
+    # ato 4 a cidade do caos 38 a 50 ↓
+
+    elif entrada_monstro == "guarda_de_ferro":
+        monstro = {
+            "nome_monstro": "Guarda de Ferro",
+            "vida_monstro": 220,
+            "dano_monstro": 38,
+            "velocidade_monstro": 12,
+            "defesa_monstro": 42,
+            "xp_monstro": 220,
+            "drop_moeda": 80,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "sabujo_do_caos":
+        monstro = {
+            "nome_monstro": "Sabujo do Caos",
+            "vida_monstro": 160,
+            "dano_monstro": 42,
+            "velocidade_monstro": 35,
+            "defesa_monstro": 18,
+            "xp_monstro": 200,
+            "drop_moeda": 75,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "cavaleiro_negro":
+        monstro = {
+            "nome_monstro": "Cavaleiro Negro",
+            "vida_monstro": 250,
+            "dano_monstro": 45,
+            "velocidade_monstro": 20,
+            "defesa_monstro": 38,
+            "xp_monstro": 260,
+            "drop_moeda": 110,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "algoz_do_caos":
+        monstro = {
+            "nome_monstro": "Algoz do Caos",
+            "vida_monstro": 200,
+            "dano_monstro": 50,
+            "velocidade_monstro": 28,
+            "defesa_monstro": 22,
+            "xp_monstro": 240,
+            "drop_moeda": 100,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "feiticeiro_sombrio":
+        monstro = {
+            "nome_monstro": "Feiticeiro Sombrio",
+            "vida_monstro": 180,
+            "dano_monstro": 48,
+            "velocidade_monstro": 24,
+            "defesa_monstro": 20,
+            "xp_monstro": 250,
+            "drop_moeda": 120,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "demonio_de_fogo":
+        monstro = {
+            "nome_monstro": "Demônio de Fogo",
+            "vida_monstro": 230,
+            "dano_monstro": 46,
+            "velocidade_monstro": 22,
+            "defesa_monstro": 28,
+            "xp_monstro": 280,
+            "drop_moeda": 130,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "golem_de_sangue":
+        monstro = {
+            "nome_monstro": "Golem de Sangue",
+            "vida_monstro": 300,
+            "dano_monstro": 40,
+            "velocidade_monstro": 10,
+            "defesa_monstro": 35,
+            "xp_monstro": 300,
+            "drop_moeda": 140,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "general_de_elite":
+        monstro = {
+            "nome_monstro": "General de Elite",
+            "vida_monstro": 280,
+            "dano_monstro": 52,
+            "velocidade_monstro": 24,
+            "defesa_monstro": 40,
+            "xp_monstro": 320,
+            "drop_moeda": 180,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "comandante":
+        monstro = {
+            "nome_monstro": "Comandante",
+            "vida_monstro": 320,
+            "dano_monstro": 55,
+            "velocidade_monstro": 26,
+            "defesa_monstro": 45,
+            "xp_monstro": 350,
+            "drop_moeda": 220,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "dragao_de_sombras":
+        monstro = {
+            "nome_monstro": "Dragão de Sombras",
+            "vida_monstro": 500,
+            "dano_monstro": 65,
+            "velocidade_monstro": 28,
+            "defesa_monstro": 50,
+            "xp_monstro": 800,
+            "drop_moeda": 400,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "lorde_loop_f1":
+        monstro = {
+            "nome_monstro": "Lorde Loop (Fase 1)",
+            "vida_monstro": 650,
+            "dano_monstro": 70,
+            "velocidade_monstro": 30,
+            "defesa_monstro": 40,
+            "xp_monstro": 1000,
+            "drop_moeda": 0,
+            "drops_100_monstro": []
+        }
+    elif entrada_monstro == "lorde_loop_f2":
+        monstro = {
+            "nome_monstro": "Lorde Loop (Fase 2)",
+            "vida_monstro": 850,
+            "dano_monstro": 85,
+            "velocidade_monstro": 35,
+            "defesa_monstro": 55,
+            "xp_monstro": 2000,
+            "drop_moeda": 1000,
+            "drops_100_monstro": []
+        }
+
+    return monstro
 
     
      
