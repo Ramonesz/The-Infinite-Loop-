@@ -121,7 +121,7 @@ def obter_raca():
 
 xp = 0 # Dá para fazer um sistema em que a cada 100 de xp ele reseta e ganha um nível, ganhando mais atributos
 nivel = 0
-
+fase=1
 inventario = {'item_de_exemplo'}
 items_no_inv = len(inventario)
 # Talvez adicionar mais alguma coisa
@@ -133,7 +133,6 @@ ouro=0
 fome = 100
 armadura = 0 # A armadura aqui vem do que ele está vestindo
 peso = 0 + item_de_exemplo # Quanto peso o personagem carrega (fiz a soma do item de exemplo só para ver como fica)
-fase=0
 # Atributos que mudam dependendo da raça ↓ 
 
 vida = 0 # 100 é a vida base, dependendo da raça pode aumentar ou diminuir
@@ -175,11 +174,8 @@ def exibir_inventario():
     """)
     retirar_item_inv()
 
-    
-            
-        
 
-def exibir_status(nome_usuario,vida,defesa,velocidade,mana,items_no_inv):
+def exibir_status(nome_usuario,vida,defesa,velocidade,mana,items_no_inv,fase):
     print(f"""              
             - STATUS DE {nome_usuario.upper()} -
             Fase:..........{fase}/100
@@ -789,7 +785,8 @@ def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo
 
     
      
-def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana,items_no_inv): # Inicia o jogo 
+def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana,items_no_inv,fase): # Inicia o jogo 
+    limpar()
     inicio_sessao = time.time() 
     
     print(f"--- INICIANDO A AVENTURA DE {nome_usuario.upper()} ---")
@@ -799,7 +796,13 @@ def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana,items
 
         if entrada == "/inv":
             exibir_inventario()
-            
+
+        elif entrada == "1" or entrada== "2":
+            fase+=1
+
+        elif entrada == "a":
+            print(fase)
+
         elif entrada == "/help":
             exibir_help()
         elif entrada =="/raca":
@@ -837,7 +840,7 @@ def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana,items
             print(f"Seu nick atual é: {nome_usuario}")    
 
         elif entrada == "/sts":
-            exibir_status(nome_usuario,vida,defesa,velocidade,mana,items_no_inv)
+            exibir_status(nome_usuario,vida,defesa,velocidade,mana,items_no_inv,fase)
 
         elif entrada == "/start":
             print('Você não pode usar o comando "/start", o jogo já iniciou!')
@@ -847,7 +850,7 @@ def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana,items
 
         else:
             print("Comando inválido! Digite /help para ver a lista de comandos.")
-
+    return fase
 
 def main(): # Parte do menu
     limpar()
@@ -864,7 +867,7 @@ def main(): # Parte do menu
             nome_usuario = obter_nickname()
             raca_escolhida= obter_raca()
             vida,defesa,velocidade,mana=definir_atributos(raca_escolhida)
-            iniciar_jogo(nome_usuario,raca_escolhida,vida,defesa,velocidade,mana,items_no_inv)
+            iniciar_jogo(nome_usuario,raca_escolhida,vida,defesa,velocidade,mana,items_no_inv,fase)
             break 
             
         elif entrada == "/sair":
