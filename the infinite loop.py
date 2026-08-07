@@ -783,7 +783,158 @@ def monstros(entrada_monstro): #aq temos um dicionario que funciona como um tipo
 
     return monstro
 
-    
+# FASESSS
+def exibirtxt(fase):
+
+    if fase == 1:
+        print(" ")
+
+    if fase == 2:
+        print(" ")
+
+    if fase == 3:
+        print(" ")
+
+    if fase == 4:
+        print(" ")
+
+    if fase == 5:
+        print(" ")
+
+    if fase == 6:
+        print(" ")
+
+    if fase == 7:
+        print(" ")
+
+    if fase == 8:
+        print(" ")
+
+    if fase == 9:
+        print(" ")
+
+    if fase == 10:
+        print(" ")
+
+    if fase == 11:
+        print(" ")
+
+    if fase == 12:
+        print(" ")
+
+    if fase == 13:
+        print(" ")
+
+    if fase == 14:
+        print(" ")
+
+    if fase == 15:
+        print(" ")
+
+    if fase == 16:
+        print(" ")
+
+    if fase == 17:
+        print(" ")
+
+    if fase == 18:
+        print(" ")
+
+    if fase == 19:
+        print(" ")
+
+    if fase == 20:
+        print(" ")
+
+    if fase == 21:
+        print(" ")
+
+    if fase == 22:
+        print(" ")
+
+    if fase == 23:
+        print(" ")
+
+    if fase == 24:
+        print(" ")
+
+    if fase == 25:
+        print(" ")
+
+    if fase == 26:
+        print(" ")
+
+    if fase == 27:
+        print(" ")
+
+    if fase == 28:
+        print(" ")
+
+    if fase == 29:
+        print(" ")
+
+    if fase == 30:
+        print(" ")
+
+    if fase == 31:
+        print(" ")
+
+    if fase == 32:
+        print(" ")
+
+    if fase == 33:
+        print(" ")
+
+    if fase == 34:
+        print(" ")
+
+    if fase == 35:
+        print(" ")
+
+    if fase == 36:
+        print(" ")
+
+    if fase == 37:
+        print(" ")
+
+    if fase == 38:
+        print(" ")
+
+    if fase == 39:
+        print(" ")
+
+    if fase == 40:
+        print(" ")
+
+    if fase == 41:
+        print(" ")
+
+    if fase == 42:
+        print(" ")
+
+    if fase == 43:
+        print(" ")
+
+    if fase == 44:
+        print(" ")
+
+    if fase == 45:
+        print(" ")
+
+    if fase == 46:
+        print(" ")
+
+    if fase == 47:
+        print(" ")
+
+    if fase == 48:
+        print(" ")
+
+    if fase == 49:
+        print(" ")
+
+    if fase == 50:
+        print(" ")
      
 def iniciar_jogo(nome_usuario, raca_personagem,vida,defesa,velocidade,mana,items_no_inv,fase): # Inicia o jogo 
     limpar()
